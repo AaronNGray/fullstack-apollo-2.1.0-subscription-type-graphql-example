@@ -45,6 +45,8 @@ const server = new ApolloServer({
   resolvers,
 });
 */
+( async () => {
+
 const schema = await buildSchema({ resolvers:[MessageResolver] });
 
 const server = new ApolloServer({
@@ -69,3 +71,5 @@ setInterval(() => {
 
   id++;
 }, 1000);
+
+})();

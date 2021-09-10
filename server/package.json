@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "ts-node src/index.js",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
@@ -15,8 +15,10 @@
     "apollo-server-express": "^2.1.0",
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "graphql": "^14.0.2",
-    "subscriptions-transport-ws": "^0.9.15"
+    "graphql": "^15.3.0",
+    "reflect-metadata": "^0.1.13",
+    "subscriptions-transport-ws": "^0.9.15",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
