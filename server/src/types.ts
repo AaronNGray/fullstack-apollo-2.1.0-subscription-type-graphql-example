@@ -9,14 +9,6 @@ export class Message {
     content: String = ""
 };
 
-@InputType()
-export class MessageInput {
-    @Field(type => Number)
-    id: Number = 0
-    @Field(type => String)
-    content: String = ""
-};
-
 @Resolver(Message)
 export class MessageResolver {
     @Query(returns => [Message])
@@ -31,7 +23,7 @@ export class MessageResolver {
         topics: "MESSAGE_CREATED"
     })
     messageCreated(
-        @Arg("message", type => MessageInput) message : Message
+        @Root() message : Message
     ): Message {
         console.log(message);
         return message;
