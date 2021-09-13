@@ -23,9 +23,9 @@ export class MessageResolver {
         topics: "MESSAGE_CREATED"
     })
     messageCreated(
-        @Root() message : Message
+        @Root() payload : any
     ): Message {
-        console.log(message);
-        return message;
+        console.log("messageCreated():-", payload);
+        return payload.messageCreated;
     }
 };
